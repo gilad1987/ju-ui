@@ -1,4 +1,4 @@
-# JuUi
+# JerusalemU UI
 
 Welcome to your kick application!
 
