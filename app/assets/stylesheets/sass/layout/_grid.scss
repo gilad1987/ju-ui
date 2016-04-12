@@ -1,0 +1,30 @@
+@import "../helpers/variables";
+@import "../helpers/mixin";
+
+*{box-sizing: border-box}
+.ju-row{overflow: hidden}
+
+[class^="ju-col-"]{
+  float:left;position: relative;min-height: 1px;padding: 11px;
+}
+.group[class*="ju-col-"]{padding: 0;}
+
+@include makeGrid(xs);
+
+/*  mobile */
+@media (min-width: #{$mobile} + 'px') {  }
+
+/* pre mobile */
+@media (min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px') {
+  @include makeGrid(ms);
+}
+
+/* tablet */
+@media (min-width: #{$tablet} + 'px') {
+  @include makeGrid(md);
+}
+
+/* desktop */
+@media (min-width: #{$desktop} + 'px') {
+  @include makeGrid(lg);
+}

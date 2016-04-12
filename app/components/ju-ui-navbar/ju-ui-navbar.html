@@ -1,0 +1,13 @@
+<style>
+    .ju-ui-navbar{float:right;}
+    .ju-ui-navbar li{float:right;}
+    .ju-ui-navbar li a:hover{text-decoration: underline}
+    .ju-ui-navbar li.active a{color:red; }
+    .ju-ui-navbar li:after{content:'|'; margin:0 4px;}
+    .ju-ui-navbar li:first-child:after{content:'';}
+</style>
+<ul>
+    <li ng-repeat="state in juUiNavbar.states" ui-sref-active="active" ng-if="!state.abstract">
+        <a ui-sref="{{::state.name}}">{{::state.name}}</a>
+    </li>
+</ul>

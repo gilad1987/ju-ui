@@ -1,0 +1,16 @@
+<div class="ju-width ju-row">
+    <div class="ju-col-lg-24of24">
+        <h1>Colors</h1>
+
+        <div class="ju-col-lg-12of24 group" ng-repeat="color in Colors.colorsList">
+            <div class="ju-col-lg-12of24 " ng-repeat="buttonState in Colors.buttonsState">
+                <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorClassName(color,buttonState)">
+                    <div class="color"></div>
+                    <div class="text">
+                        {{ :: Colors.getColorNameAndState(color,buttonState)}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

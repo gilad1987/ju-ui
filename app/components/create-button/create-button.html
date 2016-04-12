@@ -1,0 +1,29 @@
+
+<label>Choose size:</label>
+<select ng-model="createButton.color" ng-init="createButton.color = createButton.colors[0]" ng-options="color.name for color in createButton.colors"></select>
+<label>Choose size:</label>
+<select ng-model="createButton.size" ng-init="createButton.size = createButton.sizes[0]" ng-options="size.name for size in createButton.sizes"></select>
+<label>Choose radius size:</label>
+<select ng-model="createButton.radiusOption" ng-init="createButton.radiusOption = createButton.radiusOptions[0]" ng-options="radius.name for radius in createButton.radiusOptions"></select>
+<label>Choose shadow width:</label>
+<select ng-model="createButton.shadowOption" ng-init="createButton.shadowOption = createButton.shadowOptions[0]" ng-options="shadow.name for shadow in createButton.shadowOptions"></select>
+<label>Choose Is disabled:</label>
+<select ng-model="createButton.disableOption" ng-init="createButton.disableOption = createButton.disabledOptions[1]" ng-options="disabled.name for disabled in createButton.disabledOptions"></select>
+
+
+
+<div ng-if="createButton.color.value!=0">
+    <div>Button:</div>
+    <button id="button-template" class="Button " ng-class="[
+    'Button--'+createButton.size.name,
+    'Button--'+createButton.color.name,
+    'u-Radios-width'+createButton.radiusOption.name,
+    {'Button--shadow':createButton.shadowOption.value==1},
+    {'is-disable':createButton.disableOption.value==1}
+    ]" >
+
+        Button
+    </button>
+</div>
+<br>
+<button ng-click="createButton.copyToClipboard()" class="Button  Button--compact Button--blue-primary u-Radios-width5"> copy to clipboard</button>
