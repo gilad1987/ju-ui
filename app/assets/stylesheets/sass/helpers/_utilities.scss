@@ -14,7 +14,6 @@ $social-button-padding:24;
 .u-ignorePaddingTop{padding-top:0 !important;}
 
 //colors
-.u-backgroundBluePrimary{background-color: #{$color-blue-primary}}
 @include createUtilityBackgroundColors($button_colors);
 
 // Social background

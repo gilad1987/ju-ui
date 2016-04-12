@@ -26,15 +26,27 @@ $icon-button-margin-right:5;
 
   & i{margin-right: #{$icon-button-margin-right}px;}
 
-  &.is-loading i{
-    display: none;
-    transition: all 300ms ease-out 50ms ;
-    max-width:0;
-    overflow: hidden;
-    position: relative;
-    top: 2px;
+  &--loading{
+    &:before{
+      margin-right: #{$icon-button-margin-right}px;
+      display: none;
+      transition: all 300ms ease-out 50ms ;
+      max-width:0;
+      overflow: hidden;
+      position: relative;
+      top: 2px;
+      animation: rotate360 4s infinite linear;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content:"\F110"
+    }
+
+    &.is-loading:before{
+      display: inline-block; max-width:30px; animation: rotate360 4s infinite linear;
+    }
   }
-  &--loading.is-loading i{display: inline-block; max-width:30px; animation: rotate360 4s infinite linear;}
 
   &--shadow:not(.is-disable):not(.is-inverse){box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.56);}
   &--margin{margin:22px 0}

@@ -12,9 +12,11 @@
 }
 
 @function getItem($list,$key) {
-  @return nth($list, $key);
+ @if(length($list) > ($key + (-1))){
+    @return nth($list, $key);
+  }
+  @return '';
 }
-
 
 @mixin addButtonColorSuffix($button_colors) {
   @each $name, $colors in $button_colors{
@@ -32,11 +34,21 @@
   }
 }
 
-@mixin createUtilityBackgroundColors($button_colors) {
+@function generateBackgroundClass($colorName,$hasStates,$keyState){
+  $className: 'u-Background--'+$colorName;
   $suffix:('','--hover','--active');
+  @if($hasStates && $keyState>1){
+    $className: $className + getItem($suffix,$keyState);
+  }
+  @return $className;
+}
+
+@mixin createUtilityBackgroundColors($button_colors) {
   @each $name, $colors in $button_colors{
-    @for $i from 1 through 3{
-      .u-Background--#{$name}#{getItem($suffix,$i)}{
+    $len : length($colors);
+    @for $i from 1 through $len{
+      $className:generateBackgroundClass($name,$len>1,$i);
+      .#{$className}{
         background-color: #{getItem($colors,$i)};
         .text{
           &:after{
@@ -45,6 +57,5 @@
       }
     }
   }
-
 }
 

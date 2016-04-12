@@ -26,7 +26,7 @@ $color-primary-black : '#222';
 $color-dark-gray : '#444';
 $color-medium-gray : '#888';
 $color-light-gray : '#d9d9d9';
-$color-very-light-grey : '#e9e9e9';
+$color-very-light-gray : '#e9e9e9';
 $color-light : '#F4F5F8';
 $color-sun-flower : '#ffc120';
 $color-amethyst : '#94459a';
@@ -49,7 +49,15 @@ $button_colors: (
         orange-primary:($color-orange-primary,$color-orange-primary-hover,$color-orange-primary-active),
         light-blue:($color-light-blue,$color-light-blue-hover,$color-light-blue-active),
         cool-gray:($color-cool-gray,$color-cool-gray-hover,$color-cool-gray-active),
-        pale-blue:($color-pale-blue,$color-pale-blue-hover,$color-pale-blue-active)
+        pale-blue:($color-pale-blue,$color-pale-blue-hover,$color-pale-blue-active),
+        primary-black:($color-primary-black),
+        dark-gray:($color-dark-gray),
+        medium-gray:($color-medium-gray),
+        light-gray:($color-light-gray),
+        very-light-gray:($color-very-light-gray),
+        light:($color-light),
+        sun-flower:($color-sun-flower),
+        amethyst:($color-amethyst),
 );
 
 
