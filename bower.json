@@ -1,0 +1,21 @@
+{
+  "name": "JuUi",
+  "description": "AngularJS Application",
+  "main": "app.js",
+  "authors": [
+    "gilad1987 <gilad1987@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/gilad1987/ju-ui",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularSelectbox": "angular-selectbox#^0.0.2"
+  }
+}

@@ -5,20 +5,20 @@ $icon-button-margin-right:5;
 
 
 .Button {
-  cursor:pointer; text-align: center; border:none; color:#{$color-white}; font-weight: 500; text-transform: uppercase;
-  &--large {width:202px; height:68px; line-height: 68px;  }
-  &--primary {  width:246px; height:56px; line-height: 56px;  }
+  padding:0 22px; cursor:pointer; text-align: center; border:none; color:#{$color-white}; font-weight: 500; text-transform: uppercase;
+  &--large {min-width:202px; height:68px; line-height: 68px;  }
+  &--primary {  min-width:246px; height:56px; line-height: 56px;  }
   &--large,&--primary{font-size:20px;}
 
-  &--secondary{width:146px; height:56px; line-height: 56px;}
-  &--small{width:146px; height:44px; line-height: 44px;}
+  &--secondary{min-width:146px; height:56px; line-height: 56px;}
+  &--small{min-width:146px; height:44px; line-height: 44px;}
   &--secondary,&--small{font-size:16px;}
 
-  &--mini{width:102px; height:44px; line-height: 44px;}
-  &--compact{width:202px; height:34px; line-height: 34px;}
+  &--mini{min-width:102px; height:44px; line-height: 44px;}
+  &--compact{min-width:202px; height:34px; line-height: 34px;}
   &--mini,&--compact{font-size:14px;}
 
-  &--tag{width:auto; height:27px; line-height: 27px; font-size:14px; padding:0 22px; text-transform: none;}
+  &--tag{min-width:auto; height:27px; line-height: 27px; font-size:14px; padding:0 22px; text-transform: none;}
 
   @include addButtonColorSuffix($button_colors);
 
@@ -44,7 +44,7 @@ $icon-button-margin-right:5;
     }
 
     &.is-loading:before{
-      display: inline-block; max-width:30px; animation: rotate360 4s infinite linear;
+      display: inline-block; max-min-width:30px; animation: rotate360 4s infinite linear;
     }
   }
 

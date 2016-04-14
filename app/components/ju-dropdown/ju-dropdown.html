@@ -1,12 +1,12 @@
-<div class="ju-Dropdown open">
+<div class="ju-Dropdown"  ng-class="{'open':juDropdown.isOpen}">
 
-    <div class="LabelAndIcon">
+    <div class="LabelAndIcon ju-Dropdown-label" ng-click="juDropdown.onToggle()">
         <div class="icon"></div>
         <div class="label"></div>
     </div>
 
-    <div class="options">
-        <div class="option active">option 6</div>
+    <div class="options ju-Dropdown-options-wrapper" >
+        <div class="option active ju-Dropdown-option-item" ng-click="juDropdown.onSelect()">option 6</div>
         <div class="option">option 6</div>
     </div>
 

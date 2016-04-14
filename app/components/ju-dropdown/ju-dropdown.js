@@ -1,15 +1,18 @@
+
 class juDropdownController {
   // @ngInject
-  constructor($log, $element) {
-    let current = {};
+  constructor($log, $element, $document) {
+    this.isOpen = false;
+    this.$element = $element;
+    let _this = this;
   }
 
-  onOptionChecked(){
-
+  onToggle(){
+    this.isOpen = !this.isOpen;
   }
 
-  onSelectClick(){
-
+  onSelect(){
+    this.onToggle();
   }
 }
 
@@ -21,3 +24,20 @@ export const juDropdown = {
   controller: juDropdownController,
   controllerAs: 'juDropdown'
 };
+
+//
+//hasClass(element , className){
+//  return (" " + element.className + " ").replace(/[\n\t]/g, " ").indexOf(className) != -1;
+//}
+//let element=null;
+//let parent = $event.target.parentNode;
+//
+//while (!this.hasClass(parent,'ju-Dropdown')){
+//  parent = parent.parentNode;
+//}
+//
+//if(this.hasClass(parent,'open')){
+//  parent.classList.remove('open');
+//}else{
+//  parent.classList.add('open');
+//}

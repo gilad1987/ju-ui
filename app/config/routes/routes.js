@@ -10,6 +10,7 @@ import { homeRoutes } from 'config/routes/home';
 import { staticRoutes } from 'config/routes/static';
 
 const defaultRoute = /* @ngInject */ ($urlRouterProvider) => {
+  //$urlRouterProvider.when('/','/forms');
   $urlRouterProvider.otherwise('/404');
 };
 

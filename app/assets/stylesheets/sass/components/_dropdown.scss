@@ -16,7 +16,7 @@ $company-class-prefix:'ju';
   }
 
   .options{
-    opacity: 0;  border: 1px solid #D2D2D2;  border-top: none;  border-color: #8E8D8D;
+    position: relative; opacity: 0;  border: 1px solid #8E8D8D;  border-top: none;  ;
     -webkit-transition: opacity 300ms ease-out ;
     -moz-transition: opacity 300ms ease-out ;
     -o-transition: opacity 300ms ease-out ;
@@ -48,36 +48,3 @@ $company-class-prefix:'ju';
     }
   }
 }
-
-/* select */
-.ju-select{}
-.ju-select select{display: none}
-.ju-select .ju-expander:after{  position: absolute;  color: #E5E5E5;  right: 13px;  top: 12px;  font: normal normal normal 14px/1 FontAwesome;  content: "\f078";
-  -webkit-transition: transform 300ms ease-out , color 200ms;
-  -moz-transition: transform 300ms ease-out , color 200ms;
-  -o-transition: transform 300ms ease-out , color 200ms;
-  transition: transform 300ms ease-out , color 200ms;
-}
-.ju-select.ju-expandable.ju-expanded .ju-expander:after{color: #7D7D7D;
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform:rotate(180deg);
-}
-.ju-select.ju-expandable{width: 100%;height: 40px;overflow: hidden;cursor: pointer;z-index: 5000;}
-.ju-select.ju-expandable .options{  opacity: 0;  border: 1px solid #D2D2D2;  border-top: none;  border-color: #8E8D8D;
-  -webkit-transition: opacity 300ms ease-out ;
-  -moz-transition: opacity 300ms ease-out ;
-  -o-transition: opacity 300ms ease-out ;
-  transition: opacity 400ms ease-out;
-}
-.ju-select.ju-expandable .ju-option{  height: 40px;  line-height: 40px;  background: white;  border-bottom: 1px solid #D2D2D2;  padding-left: 10px;  z-index: 2;position: relative;}
-.ju-select.ju-expandable .ju-option.active{  background: #F5F5F5;  color: #194F9B;}
-.ju-select.ju-expandable .ju-option.active:after{    content: "\f00c"; color: #8E8D8D;  font: normal normal normal 14px/1 FontAwesome;margin-left: 10px;}
-.ju-select.ju-expandable .ju-option:hover{  background: #F7F7F7;  color: #194F9B;}
-.ju-select.ju-expandable.ju-expanded{overflow: visible;}
-.ju-select.ju-expandable.ju-expanded .options{  opacity: 1;  }
-.ju-select.ju-expandable .ju-expander{height: 40px;position: relative;line-height: 40px;background: white;border: 1px solid #D2D2D2;padding-left: 10px;}
-.error .ju-select.ju-expandable .ju-expander{  border-color: red;  color: initial;  }
-.ju-select.ju-expandable.ju-expanded .ju-expander{  border-color: #8E8D8D;  border-bottom-color: #D2D2D2;  }
-
-/* end - select */

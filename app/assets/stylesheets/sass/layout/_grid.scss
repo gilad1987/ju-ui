@@ -2,7 +2,11 @@
 @import "../helpers/mixin";
 
 *{box-sizing: border-box}
-.ju-row{overflow: hidden}
+.ju-row:after{
+  content: '';
+  display: table;
+  clear: both;
+}
 
 [class^="ju-col-"]{
   float:left;position: relative;min-height: 1px;padding: 11px;

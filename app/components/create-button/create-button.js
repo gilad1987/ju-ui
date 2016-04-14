@@ -12,14 +12,15 @@ class createButtonController {
       value:45
     }];
 
-    this.shadowOptions = this.disabledOptions = [{
+    this.shadowOptions =
+    this.disabledOptions =
+    this.inverseOptions = [{
       name:1,
       value:1
     },{
       name:0,
       value:0
     }];
-
   }
 
   copyToClipboard(e){
