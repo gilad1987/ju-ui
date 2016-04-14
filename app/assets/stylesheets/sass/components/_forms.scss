@@ -18,6 +18,8 @@ input{outline: none}
   position: relative;
   direction: ltr;
   margin: #{$ju-gutter/2}px 0;
+
+
   &:first-child{margin-top:0;}
   &.error{
     .#{$error-class-name}{
@@ -200,6 +202,12 @@ input{outline: none}
     }
     .input{overflow: hidden;}
     .button{float:right; text-align:center;line-height: #{$input-height}px; }
+  }
+
+  &--highlight{
+    padding:4px #{$ju-gutter}px 6px;
+    border: 1px solid #{$color-light-gray};
+    border-radius: 5px;
   }
 }
 

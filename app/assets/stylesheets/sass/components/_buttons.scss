@@ -44,7 +44,7 @@ $icon-button-margin-right:5;
     }
 
     &.is-loading:before{
-      display: inline-block; max-min-width:30px; animation: rotate360 4s infinite linear;
+      display: inline-block; min-width:30px; animation: rotate360 4s infinite linear;
     }
   }
 

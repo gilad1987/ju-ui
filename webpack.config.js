@@ -5,7 +5,7 @@ const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanPlugin       = require('clean-webpack-plugin');
 const environmentsFile  = require('./environments.json');
-//const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const appPath           = path.join(__dirname, 'app');
 const distPath          = path.join(__dirname, 'dist');
 const exclude           = /node_modules/;
@@ -55,11 +55,11 @@ const config = {
     new webpack.NoErrorsPlugin(),
 
     // Global replacements for each environment
-    new webpack.DefinePlugin(getENVReplacements())
+    new webpack.DefinePlugin(getENVReplacements()),
 
-    //new ExtractTextPlugin("[name].css",{
-    //  allChunks: true
-    //})
+    new ExtractTextPlugin("app/assets/stylesheets/main.css",{
+      allChunks: true
+    })
   ],
 
   // Enable loading modules relatively (without the ../../ prefix)
@@ -87,7 +87,8 @@ const config = {
           'style',
           'css',
           'autoprefixer',
-          `sass?includePaths[]=${appPath}`
+          `sass?includePaths[]=${appPath}`,
+          ExtractTextPlugin.extract('css!sass')
         ]
       },
 
