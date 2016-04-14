@@ -1,8 +1,10 @@
 class createButtonController {
   // @ngInject
-  constructor($log, $element) {
+  constructor($log, $element, $http , $scope) {
 
     this.$element = $element;
+    this.items = [];
+
 
     this.radiusOptions = [{
       name:5,
@@ -21,6 +23,24 @@ class createButtonController {
       name:0,
       value:0
     }];
+
+    this.icons = [{
+      name:'Choose icon',
+      value:0
+    }];
+
+    $http.get('/assets/files/font-awesome-data-readable.json')
+        .then((response)=>{
+          Object.keys(response.data).map((item)=>{
+            return this.icons.push({
+              name:item,
+              value:item
+            })
+          });
+        })
+        .catch(()=>{
+
+        });
   }
 
   copyToClipboard(e){
@@ -28,10 +48,9 @@ class createButtonController {
     var getHTML= function(who, deep){
       if(!who || !who.tagName) return '';
       var txt, ax, el= document.createElement("div");
-      var clone = who.cloneNode(false);
+      var clone = who.cloneNode(true);
       clone.removeAttribute("ng-class");
       clone.removeAttribute("id");
-      clone.innerText = "TEMPLATE TEXT";
       el.appendChild(clone);
       txt= el.innerHTML;
       if(deep){
@@ -43,7 +62,10 @@ class createButtonController {
     };
 
     var textArea = document.createElement("textarea");
-    textArea.innerText = getHTML(document.getElementById('button-template'),false);
+    var htmlAsString = getHTML(document.getElementById('button-template'),false);
+    htmlAsString = htmlAsString.replace(/([\<][\!][\-]+[a-z\s\:\.\!\=0-9\-]+[\>])|(ng-scope)|((ng-class|ng-if)[\=\"\[a-z\.\]\!0-9]+)/gi, '');
+
+    textArea.innerText = htmlAsString;
     document.body.appendChild(textArea);
     textArea.select();
 

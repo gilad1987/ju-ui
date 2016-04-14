@@ -1,6 +1,6 @@
 <div class="ju-row">
 
-    <div class="ju-col-lg-5of24">
+    <div class="ju-col-lg-6of24">
         <label>Choose size:</label>
         <select ng-model="createButton.color" ng-init="createButton.color = createButton.colors[0]" ng-options="color.name for color in createButton.colors"></select>
         <br>
@@ -23,10 +23,14 @@
         <br>
         <label>Choose Is inverse:</label>
         <select ng-model="createButton.inverseOption" ng-init="createButton.inverseOption = createButton.inverseOptions[1]" ng-options="inverse.name for inverse in createButton.inverseOptions"></select>
+        <br>
+        <br>
+        <label>Choose Icon:</label>
+        <select id="icon" ng-model="createButton.icon" ng-init="createButton.icon = createButton.icons[0]" ng-options="icon.name for icon in createButton.icons"></select>
 
     </div>
 
-    <div class="ju-col-lg-19of24">
+    <div class="ju-col-lg-18of24">
         <div ng-if="createButton.color.value!=0">
 
             <button id="button-template" class="Button " ng-class="[
@@ -38,6 +42,7 @@
     {'is-inverse':createButton.inverseOption.value==1}
     ]" >
 
+                <i class="fa" ng-class="[createButton.icon.name]" ng-if="createButton.icon.value!=0"></i>
                 Button
             </button>
         </div>
