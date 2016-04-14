@@ -43,7 +43,13 @@ input{outline: none}
   [class*="checkbox"]{
     position: absolute;left: -9999px;
 
-    + label{position: relative;  padding-left: #{20+($ju-gutter)}px;cursor: pointer;width: auto; line-height: initial; display: inline-block; margin: 3px 0;}
+    + label{
+      position: relative;  padding-left: 20px;cursor: pointer;width: auto; line-height: initial; display: inline-block; margin: 3px 0;
+      span:not(.icon-bg){
+        display: inline-block;
+        margin-left:#{$ju-gutter}px;
+      }
+    }
     + label:before,
     + label:after {  content: ''; top:3px; position: absolute;  left:0;width: 20px;height: 20px;
       border: 2px solid;  background: #f8f8f8;
