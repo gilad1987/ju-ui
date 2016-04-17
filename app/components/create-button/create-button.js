@@ -5,6 +5,8 @@ class createButtonController {
     this.$element = $element;
     this.items = [];
 
+    this.Button = {};
+    this.Button.text = 'Insert your text';
 
     this.radiusOptions = [{
       name:5,
@@ -16,11 +18,12 @@ class createButtonController {
 
     this.shadowOptions =
     this.disabledOptions =
+    this.loadingOptions =
     this.inverseOptions = [{
-      name:1,
+      name:'Yes',
       value:1
     },{
-      name:0,
+      name:'No',
       value:0
     }];
 
@@ -49,8 +52,8 @@ class createButtonController {
       if(!who || !who.tagName) return '';
       var txt, ax, el= document.createElement("div");
       var clone = who.cloneNode(true);
-      clone.removeAttribute("ng-class");
-      clone.removeAttribute("id");
+      //clone.removeAttribute("ng-class");
+      //clone.removeAttribute("id");
       el.appendChild(clone);
       txt= el.innerHTML;
       if(deep){
@@ -63,7 +66,9 @@ class createButtonController {
 
     var textArea = document.createElement("textarea");
     var htmlAsString = getHTML(document.getElementById('button-template'),false);
-    htmlAsString = htmlAsString.replace(/([\<][\!][\-]+[a-z\s\:\.\!\=0-9\-]+[\>])|(ng-scope)|((ng-class|ng-if)[\=\"\[a-z\.\]\!0-9]+)/gi, '');
+    console.log(htmlAsString);
+    htmlAsString = htmlAsString.replace(/((([\<][\!][\-][\-][\s])|(ng-[a-z]+[\=\"]+))[a-z\[\s\:\.\!\=\d\'\-\+\,\{\}\&\;\(\]\)]+([\>]|[\"]))|(ng-[\w]+)/gi,'');
+    console.log(htmlAsString);
 
     textArea.innerText = htmlAsString;
     document.body.appendChild(textArea);

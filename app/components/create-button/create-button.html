@@ -1,6 +1,10 @@
 <div class="ju-row">
 
     <div class="ju-col-lg-6of24">
+        <lable>Insert your text:</lable>
+        <input type="text" ng-model="createButton.Button.text" />
+        <br>
+        <br>
         <label>Choose size:</label>
         <select ng-model="createButton.color" ng-init="createButton.color = createButton.colors[0]" ng-options="color.name for color in createButton.colors"></select>
         <br>
@@ -25,6 +29,10 @@
         <select ng-model="createButton.inverseOption" ng-init="createButton.inverseOption = createButton.inverseOptions[1]" ng-options="inverse.name for inverse in createButton.inverseOptions"></select>
         <br>
         <br>
+        <label>Choose Is loading:</label>
+        <select ng-model="createButton.loadingOption" ng-init="createButton.loadingOption = createButton.loadingOptions[1]" ng-options="loading.name for loading in createButton.loadingOptions"></select>
+        <br>
+        <br>
         <label>Choose Icon:</label>
         <select id="icon" ng-model="createButton.icon" ng-init="createButton.icon = createButton.icons[0]" ng-options="icon.name for icon in createButton.icons"></select>
 
@@ -33,17 +41,20 @@
     <div class="ju-col-lg-18of24">
         <div ng-if="createButton.color.value!=0">
 
-            <button id="button-template" class="Button " ng-class="[
-    'Button--'+createButton.size.name,
-    'Button--'+createButton.color.name,
-    'u-Radios-width'+createButton.radiusOption.name,
-    {'Button--shadow':createButton.shadowOption.value==1},
-    {'is-disable':createButton.disableOption.value==1},
-    {'is-inverse':createButton.inverseOption.value==1}
-    ]" >
+            <button id="button-template" class="Button "
+                    ng-class="[
+                    'Button--'+createButton.size.name,
+                    'Button--'+createButton.color.name,
+                    'u-Radios-width'+createButton.radiusOption.name,
+                    {'Button--shadow':createButton.shadowOption.value==1},
+                    {'is-disable':createButton.disableOption.value==1},
+                    {'is-loading':createButton.loadingOption.value==1},
+                    {'Button--loading':createButton.loadingOption.value==1},
+                    {'is-inverse':createButton.inverseOption.value==1}
+                    ]">
 
-                <i class="fa" ng-class="[createButton.icon.name]" ng-if="createButton.icon.value!=0"></i>
-                Button
+                <i class="fa" ng-class="[createButton.icon.name]" ng-if="createButton.icon.value!=0 && ((createButton.loadingOption = createButton.loadingOptions[1]))"></i>
+                <span>{{createButton.Button.text}}</span>
             </button>
         </div>
         <br>
