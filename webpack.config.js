@@ -87,8 +87,8 @@ const config = {
           'style',
           'css',
           'autoprefixer',
-          `sass?includePaths[]=${appPath}`,
-          ExtractTextPlugin.extract('css!sass')
+          `sass?includePaths[]=${appPath}`
+          , ExtractTextPlugin.extract('css!sass')
         ]
       },
 

@@ -66,9 +66,7 @@ class createButtonController {
 
     var textArea = document.createElement("textarea");
     var htmlAsString = getHTML(document.getElementById('button-template'),false);
-    console.log(htmlAsString);
     htmlAsString = htmlAsString.replace(/((([\<][\!][\-][\-][\s])|(ng-[a-z]+[\=\"]+))[a-z\[\s\:\.\!\=\d\'\-\+\,\{\}\&\;\(\]\)]+([\>]|[\"]))|(ng-[\w]+)/gi,'');
-    console.log(htmlAsString);
 
     textArea.innerText = htmlAsString;
     document.body.appendChild(textArea);

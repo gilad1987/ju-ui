@@ -1,3 +1,4 @@
+import { ListsController } from './lists/lists';
 import { GridController } from './grid/grid';
 import { TypographyController } from './typography/typography';
 import { ColorsController } from './colors/colors';
@@ -12,4 +13,5 @@ export default angular.module('JuUi.controllers', [])
   .controller('FormsController', FormsController)
   .controller('ColorsController', ColorsController)
   .controller('TypographyController', TypographyController)
-  .controller('GridController', GridController);
+  .controller('GridController', GridController)
+  .controller('ListsController', ListsController);

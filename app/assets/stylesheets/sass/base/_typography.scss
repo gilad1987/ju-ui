@@ -1,3 +1,5 @@
+@import "colors";
+
 // Font weight
 $font-weight-thin:100;
 $font-weight-light:300;
@@ -6,7 +8,7 @@ $font-weight-medium:500;
 $font-weight-bold:700;
 $font-weight-ultra-bold:900;
 
-body{font-family: 'Roboto'; font-size:16px; font-weight:#{$font-weight-light};}
+body{font-family: 'Roboto'; font-size:16px; font-weight:#{$font-weight-light}; color:#{$color-dark-gray}; }
 
 @mixin my-calculation-function(){
   $temp:'';
@@ -31,4 +33,9 @@ h3{font-size:24px; line-height: 24px;}
 h4{font-size:20px; line-height: 20px;}
 
 .SubHeader{font-weight:#{$font-weight-medium};}
+
+.Text{
+  &--Small{font-size:12px;}
+  &--Light{color:#{$color-medium-gray}}
+}
 

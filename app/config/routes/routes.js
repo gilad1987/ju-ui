@@ -1,3 +1,4 @@
+import { listsRoutes } from './lists';
 import { gridRoutes } from './grid';
 import { typographyRoutes } from './typography';
 import { colorsRoutes } from './colors';
@@ -15,6 +16,7 @@ const defaultRoute = /* @ngInject */ ($urlRouterProvider) => {
 };
 
 export default angular.module('JuUi.routes', ['ui.router'])
+  .config(listsRoutes)
   .config(gridRoutes)
   .config(typographyRoutes)
   .config(colorsRoutes)
