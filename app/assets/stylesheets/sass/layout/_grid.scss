@@ -29,6 +29,6 @@
 }
 
 /* desktop */
-@media (min-width: #{$desktop} + 'px') {
+@media (min-width: #{($desktop+(1))} + 'px') {
   @include makeGrid(lg);
 }

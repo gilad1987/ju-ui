@@ -1,0 +1,299 @@
+body{margin:0; padding: 0; font-family: 'Roboto';}
+*{
+    box-sizing: border-box;
+}
+/* common */
+a{text-decoration:none}
+a.underline{text-decoration:underline}
+a.underline:hover{text-decoration:none}
+a span{display: block}
+.table{height:100%;display:table;width: 100%;}
+.table .cell{    display: table-cell;vertical-align: middle;line-height: normal;}
+section{overflow: hidden}
+.clear{  clear: both;}
+
+
+
+section.top-banner{color:white;padding-top: 216px;padding-bottom: 66px;background: url('/states/home-page/images/top-banner.jpg') top center no-repeat;background-size: cover;text-align: center;}
+section.top-banner h1{margin-bottom: 30px;font-size: 45px;}
+section.top-banner .sign-up{font-size: 13px;margin-top: 15px;}
+section.top-banner .sign-up a{color:white;}
+section.top-banner ul{margin-top: 130px;  margin-bottom: 16px;}
+section.top-banner ul li{  display: inline;  margin: 0 10px;  }
+
+
+/* .film */
+
+.film{
+    overflow: hidden;
+    position: relative;
+    float: left;
+    /* margin: 1.8%; */
+    top:0;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition:all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+.film:first-child{
+    /* margin-top: 85px; */
+}
+.film:nth-child(1){/* background-image: url('../images/israel-inside.png'); */}
+.film:nth-child(2){background-image: url('../../../states/home-page/images/mekonen.png');}
+.film:nth-child(3){background-image: url('../../../states/home-page/images/bth.png');}
+.film:nth-child(4){background-image: url('../../../states/home-page/images/ctl.png');max-height:193px}
+.film:nth-child(odd){
+    margin-left: 0;
+}
+.film:nth-child(even){
+    margin-right: 0;
+    float: right;
+}
+
+
+.film img{float: left;/* opacity: 0; *//* display: block; */width: 100%;}
+.film .new{  position: absolute;  top: 20px;  right: 20px;  background: url('../../../states/home-page/images/pixel-black.png');  color: white;  padding: 5px 13px;  border-radius: 4px;  font-size: 12px;
+    -webkit-transition: all 400ms ease-out ;
+    -moz-transition:all 400ms ease-out ;
+    -o-transition: all 400ms ease-out ;
+    transition: all 400ms ease-out ;
+}
+
+
+.film .text{position: absolute;bottom: 4px;color: white;font-size: 14px;padding: 0 10px 10px;
+    -webkit-transition: all 400ms ease-out ;
+    -moz-transition:all 400ms ease-out ;
+    -o-transition: all 400ms ease-out ;
+    transition: all 400ms ease-out ;
+}
+.film .text .name{}
+.film .text .slogan{}
+
+.film .overlay{  position: absolute;  width: 100%;  height: 100%;  background: url('../../../states/home-page/images/pixel-black.png');  top: 0;  left: 0;  color: white;  text-align: center;  opacity: 0;
+    -webkit-transition: all 200ms ease-out ;
+    -moz-transition:all 200ms ease-out ;
+    -o-transition: all 200ms ease-out ;
+    transition: all 200ms ease-out ;
+}
+
+.film .overlay .cell div{position:relative;/* top:5px */}
+.film .overlay .cell i{position:relative;/* top:-5px; */}
+.film .overlay .cell div,
+.film .overlay .cell i{
+    -webkit-transition: all 300ms ease-out 250ms;
+    -moz-transition:all 300ms ease-out 250ms;
+    -o-transition: all 300ms ease-out 250ms;
+    transition: all 300ms ease-out 250ms;
+}
+.film .overlay .cell i{  font-size: 35px;  }
+
+.feature-film{padding-bottom: 60px;}
+section.feature-film h4{margin: 40px 0;}
+section.feature-film .left{float:left;max-width: 550px;margin-left: -11px;}
+section.feature-film .right{height: 400px;}
+
+section.feature-film p{margin: 30px 0;}
+section.feature-film h2{text-align:left;}
+
+section.feature-film .only-mobile-tablet,
+section.feature-film .only-mobile-tablet h2{text-align: center;}
+section.feature-film .only-mobile-tablet{/* padding-bottom:20px; */}
+section.feature-film .Button{margin: 30px auto;}
+
+
+section.video-courses img{width: 100%;}
+section.video-courses p {  margin: 30px 0;  }
+section.video-courses .right{float:left;height: 550px;}
+section.video-courses .right img{width: 90%;display: block;margin: 0 auto;}
+section.video-courses .left{float:left;width: 414px;height: 550px;}
+section.video-courses h2{text-align:left;margin-top: 0;}
+section.video-courses{background:#f7f8f9}
+section.video-courses .earn{color: #999a9a;font-size: 1rem;}
+section.video-courses .earn a{color:black;}
+section.video-courses .Button{margin-bottom:67px;margin-top: 20px;}
+
+section.short-films{text-align:center;}
+section.short-films .short-film{top: 0;box-shadow: none;position: relative;overflow: hidden;}
+section.short-films .short-film .overlay{  opacity: 1;  padding: 25px;  font-size: 14px;  height: auto;  min-height: 100%;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
+    background: -moz-linear-gradient(top,rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff',endColorstr='#000000',GradientType=0);
+
+}
+.short-film  img {
+    float: left;
+    width:100%;
+}
+
+.short-film .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../states/home-page/images/pixel-black.png');
+    top: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+section.short-films .short-film{top: 0;box-shadow: none;}
+
+section.short-films .short-film .overlay i{  font-size: 38px;  margin-top: 72px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+section.short-films .short-film:hover .overlay .title {  margin: 9px 0;  }
+section.short-films .short-film:hover .overlay i{  margin-top: 40px;  }
+section.short-films .short-film .overlay .title{  text-align: left;margin: 48px 0;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+section.short-films .short-film:hover .overlay .title{margin: 9px 0;}
+section.short-films .short-film .overlay .description{  text-align: left;  font-weight: 100;  }
+section.short-films .Button{margin-top:30px}
+section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
+
+
+
+.testimonials .testimonial{  padding-left: 20px;  background: url('../../../states/home-page/images/quotes.png') left top no-repeat;  }
+.testimonials .center{max-width: 1013px; padding-top:66px; border-top: 1px solid #e8e8e8;}
+.testimonials .center .left{  float: left;  width: 50%;  padding-right: 81px;  border-right: 1px solid #e8e8e8;  height: 390px;  }
+.testimonials .center .right{  overflow: hidden;  padding-left: 110px;  }
+.testimonials .testimonial .text{line-height: 34px;}
+.testimonials .profile{margin-top: 30px;overflow: hidden;}
+.testimonials .profile img{  float: left;  margin-right: 10px;  }
+.testimonials .profile .name{  font-weight: 600;  overflow: hidden;  padding-top: 4px;  }
+.testimonials .profile .desc{  overflow: hidden;  }
+.who-are-we-video{margin-bottom: 25px;display: block;position: relative;padding: 19px;background: #eceff2;border-radius: 4px;overflow: hidden; }
+.who-are-we-video img{width:100%;margin: 0 auto;display: block;}
+.who-are-we-video:after{/* content:''; */clear:both;display: inline-block;min-height: 1px;}
+.who-are-we-video:hover .play-icon-rapper{
+    background: rgba(12, 12, 12, 0.53);
+}
+.who-are-we-video .table{position:relative;text-align: center;color: white;font-size: 55px;}
+.who-are-we-video .play-icon-rapper{position:absolute;top:0;left:0;width: 100%;height: 100%;/* padding: 18px; */}
+.who-are-link{
+    color: black;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+
+.testimonial-and-who-are-we{
+    padding-bottom: 50px;
+}
+.testimonial-and-who-are-we [class*='ju-col']{    border-top: 1px solid #e7e7e7;         padding-top: 80px;}
+.testimonial-and-who-are-we .right{border-left: 1px solid #e7e7e7;}
+.testimonial-and-who-are-we .testimonials,.testimonial-and-who-are-we  .who-are-we-wrapper{    max-width: 80%;  margin: 0 10%;}
+
+
+.our-partners{text-align:center;background: #f5f1f2;padding: 57px 0;}
+.our-partners a{display: inline-block;margin: .8%;}
+
+
+
+
+/* responsive */
+.only-mobile-tablet{display: none;}
+.only-desktop{}
+
+
+.ju-section{padding: 58px 0;}
+
+@media (max-width: 768px){
+    .ju-section {padding: 58px .8%;}
+    .ju-section{padding: 60px 0 30px; }
+    .ju-section.feature-film{padding-top:30px}
+}
+
+
+
+
+@media (min-width: 769px){
+    .film:hover .overlay .cell div,
+    .film:hover .overlay .cell i{top:0;}
+    .film:hover{top:-5px;box-shadow: 0px 3px 14px -3px #000;}
+    .film:hover .new{top: -40px;}
+    .film:hover .text{bottom:-80px;}
+    .film:hover .overlay{opacity:1}
+
+    .testimonial-and-who-are-we .ju-col-3of8{border-top: 1px solid #e7e7e7;}
+    .testimonial-and-who-are-we .ju-col-3of8.right{border-left: 1px solid #e7e7e7;padding-bottom: 44px;}
+}
+
+@media  (max-width: 769px){
+    .film{    max-height: 180px;}
+
+    .only-desktop{display:none}
+    .only-mobile-tablet{display: inline-block;}
+    h1,section.top-banner h1{
+        font-size: 2em;
+    }
+
+
+    .feature-film .ju-col-3of8 .film{width:100%;max-height: 200px;}
+    .feature-film .film img{width:100%;}
+    .feature-film .film .overlay{  background: none;  opacity: 1;  }
+    .feature-film .film .overlay .cell i{bottom: 20px;position: absolute;right: 20px;}
+    .feature-film .film .overlay .cell div{display: none;}
+    .feature-film .btn.only-mobile-tablet{display:block;}
+
+    section.video-courses,h2{text-align:center !important;}
+    section.video-courses .earn{line-height: 30px;padding: 20px 0 0;}
+    section.video-courses{}
+    section.video-courses a.btn{margin-bottom:40px;}
+    section.video-courses .earn a{display:block;}
+
+    section.short-films .short-film{height:210px;}
+
+    .testimonial-and-who-are-we{border-top: 1px solid #e7e7e7;}
+    .testimonials, .who-are-we-video{margin-top:0;margin-bottom: 50px;}
+    .who-are-we-video{display:inline-block}
+
+    section.top-banner{padding: 60px 0}
+    section.top-banner h1,
+    section.feature-film h4{margin-top:0}
+    section.top-banner ul{display:none}
+}
+
+@media (max-width: 1024px){
+
+
+    /*
+
+    .film img{width:100%;}
+    .film .overlay{  background: none;  opacity: 1;  }
+    .film .overlay .cell i{bottom: 20px;position: absolute;right: 20px;}
+    .film .overlay .cell div{display: none;}
+    section.video-courses .right{width: 50%;}
+    section.feature-film .right{  float: none;  max-width: 90%;  margin: 0 auto;  height: auto;  padding: 0;  text-align: center;  width: inherit;  }
+    section.feature-film .right h2{text-align:center}
+    .feature-film .film{float: none;width: 90%;display: block;max-height: 198px;margin: 15px auto;}
+    section.feature-film .left{float: none;width: 100%;max-width: 100000px;margin: 0;}
+    section.video-courses .left{  float: none;  max-width: 90%;  width: initial;  margin: 0 auto;  text-align: center;  height: auto;  }
+    section.video-courses .left h2{text-align:center}
+    section.video-courses .right{float: none;width: 90%;margin: 0 auto;height: auto;margin-bottom: 40px;}
+    section.video-courses{height:auto}
+    section.video-courses .earn{  margin: 26px auto 0;  text-align: center;    }
+
+    section.short-films .short-film{width: 90%;margin: 10px auto;max-height: 200px;}
+    section.short-films .short-film .overlay .title{text-align:center}
+    section.short-films a.btn{  margin-bottom: 30px;  margin-top: 10px;  }
+    .testimonials .center .right,
+    .testimonials .center .left{  width: 90%;  margin: 20px auto 46px;  float: none;  border: none;  height: auto;  padding-left: 0; }
+    */
+}

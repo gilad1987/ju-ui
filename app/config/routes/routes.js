@@ -1,3 +1,5 @@
+import { pagesRoutes } from './pages';
+//import { homePageRoutes } from './home-page';
 import { listsRoutes } from './lists';
 import { gridRoutes } from './grid';
 import { typographyRoutes } from './typography';
@@ -16,6 +18,8 @@ const defaultRoute = /* @ngInject */ ($urlRouterProvider) => {
 };
 
 export default angular.module('JuUi.routes', ['ui.router'])
+  .config(pagesRoutes)
+  //.config(homePageRoutes)
   .config(listsRoutes)
   .config(gridRoutes)
   .config(typographyRoutes)

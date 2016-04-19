@@ -1,3 +1,5 @@
+const fontAwesomeData = require('assets/files/font-awesome-data-readable.json');
+
 class createButtonController {
   // @ngInject
   constructor($log, $element, $http , $scope) {
@@ -32,18 +34,34 @@ class createButtonController {
       value:0
     }];
 
-    $http.get('/assets/files/font-awesome-data-readable.json')
-        .then((response)=>{
-          Object.keys(response.data).map((item)=>{
-            return this.icons.push({
-              name:item,
-              value:item
-            })
-          });
-        })
-        .catch(()=>{
+    this.tagNames = [
+      {
+      name:'Button',
+      value:'button'
+      },
+      {
+        name:'Link',
+        value:'link'
+      }];
 
-        });
+    Object.keys(fontAwesomeData).map((item)=>{
+      return this.icons.push({
+        name:item,
+        value:item
+      })
+    });
+    //$http.get('assets/files/font-awesome-data-readable.json')
+    //    .then((response)=>{
+    //      Object.keys(response.data).map((item)=>{
+    //        return this.icons.push({
+    //          name:item,
+    //          value:item
+    //        })
+    //      });
+    //    })
+    //    .catch(()=>{
+    //
+    //    });
   }
 
   copyToClipboard(e){
@@ -65,8 +83,8 @@ class createButtonController {
     };
 
     var textArea = document.createElement("textarea");
-    var htmlAsString = getHTML(document.getElementById('button-template'),false);
-    htmlAsString = htmlAsString.replace(/((([\<][\!][\-][\-][\s])|(ng-[a-z]+[\=\"]+))[a-z\[\s\:\.\!\=\d\'\-\+\,\{\}\&\;\(\]\)]+([\>]|[\"]))|(ng-[\w]+)/gi,'');
+    var htmlAsString = getHTML(document.getElementsByClassName('button-template')[0],false);
+    htmlAsString = htmlAsString.replace(/((([\<][\!][\-][\-][\s]?)|(ng-[a-z]+[\=\"]+))[a-z\[\s\:\.\!\=\d\'\-\+\,\{\}\&\;\(\]\)]+([\>]|[\"]))|(ng-[\w]+)|(button-template)/gi,'');
 
     textArea.innerText = htmlAsString;
     document.body.appendChild(textArea);

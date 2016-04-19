@@ -6,6 +6,7 @@ import '../node_modules/font-awesome/scss/font-awesome.scss';
 import '../node_modules/normalize.css/normalize.css';
 import 'assets/stylesheets/sass/main.scss';
 
+
 import Models     from 'models/models';
 import Services   from 'services/services';
 import Directives from 'directives/directives';

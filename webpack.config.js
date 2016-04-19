@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanPlugin       = require('clean-webpack-plugin');
 const environmentsFile  = require('./environments.json');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const appPath           = path.join(__dirname, 'app');
 const distPath          = path.join(__dirname, 'dist');
 const exclude           = /node_modules/;
@@ -26,6 +27,7 @@ const config = {
   // The base directory for resolving `entry` (must be absolute path)
   context: appPath,
 
+
   entry: {
     app: 'app.js',
     vendor: [
@@ -36,7 +38,7 @@ const config = {
 
   output: {
     path: distPath,
-    publicPath: '/',
+    publicPath: '', // '/'
     filename: 'bundle.[hash].js'
   },
 
@@ -57,9 +59,7 @@ const config = {
     // Global replacements for each environment
     new webpack.DefinePlugin(getENVReplacements()),
 
-    new ExtractTextPlugin("app/assets/stylesheets/main.css",{
-      allChunks: true
-    })
+
   ],
 
   // Enable loading modules relatively (without the ../../ prefix)
@@ -87,18 +87,9 @@ const config = {
           'style',
           'css',
           'autoprefixer',
-          `sass?includePaths[]=${appPath}`
-          , ExtractTextPlugin.extract('css!sass')
+          `sass?includePaths[]=${appPath}`,
         ]
       },
-
-      //{
-      //  test: /\.scss$/,
-      //  loader: ExtractTextPlugin.extract(
-      //      'style', // backup loader when not building .css file
-      //      'css!sass' // loaders to preprocess CSS
-      //  )
-      //},
 
       // JSON
       {
@@ -144,6 +135,16 @@ const config = {
 
 if (process.env.NODE_ENV === 'development') {
   config.devtool = '#inline-source-map';
+
+  config.plugins.push(
+      new ExtractTextPlugin("app/assets/stylesheets/main.css",{
+        allChunks: true
+      })
+  );
+
+  config.module.loaders[1].loaders.push(
+      ExtractTextPlugin.extract('css!sass')
+  );
 }
 
 if (process.env.NODE_ENV !== 'test') {
@@ -153,6 +154,9 @@ if (process.env.NODE_ENV !== 'test') {
       /* filename: */ 'vendor.[hash].js'
     )
   );
+
+
+
 }
 
 module.exports = config;

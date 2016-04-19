@@ -36,12 +36,18 @@
         <label>Choose Icon:</label>
         <select id="icon" ng-model="createButton.icon" ng-init="createButton.icon = createButton.icons[0]" ng-options="icon.name for icon in createButton.icons"></select>
 
+        <br>
+        <br>
+        <label>Choose Element:</label>
+        <select ng-model="createButton.tagName" ng-init="createButton.tagName = createButton.tagNames[0]" ng-options="tagName.name for tagName in createButton.tagNames"></select>
+
     </div>
 
     <div class="ju-col-lg-18of24">
         <div ng-if="createButton.color.value!=0">
 
-            <button id="button-template" class="Button "
+            <button  class="button-template Button"
+                    ng-if="createButton.tagName.value=='button'"
                     ng-class="[
                     'Button--'+createButton.size.name,
                     'Button--'+createButton.color.name,
@@ -56,6 +62,23 @@
                 <i class="fa" ng-class="[createButton.icon.name]" ng-if="createButton.icon.value!=0 && ((createButton.loadingOption = createButton.loadingOptions[1]))"></i>
                 <span>{{createButton.Button.text}}</span>
             </button>
+
+            <a  class="button-template Button"
+                    ng-if="createButton.tagName.value=='link'"
+                    ng-class="[
+                    'Button--'+createButton.size.name,
+                    'Button--'+createButton.color.name,
+                    'u-Radios-width'+createButton.radiusOption.name,
+                    {'Button--shadow':createButton.shadowOption.value==1},
+                    {'is-disable':createButton.disableOption.value==1},
+                    {'is-loading':createButton.loadingOption.value==1},
+                    {'Button--loading':createButton.loadingOption.value==1},
+                    {'is-inverse':createButton.inverseOption.value==1}
+                    ]">
+
+                <i class="fa" ng-class="[createButton.icon.name]" ng-if="createButton.icon.value!=0 && ((createButton.loadingOption = createButton.loadingOptions[1]))"></i>
+                <span>{{createButton.Button.text}}</span>
+            </a>
         </div>
         <br>
         <button ng-click="createButton.copyToClipboard()" class="Button Button--shadow Button--compact Button--blue-primary u-Radios-width5"> Click for export html button to clipboard</button>

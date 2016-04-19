@@ -1,3 +1,5 @@
+import { PagesController } from './pages/pages';
+import { HomePageController } from './home-page/home-page';
 import { ListsController } from './lists/lists';
 import { GridController } from './grid/grid';
 import { TypographyController } from './typography/typography';
@@ -14,4 +16,6 @@ export default angular.module('JuUi.controllers', [])
   .controller('ColorsController', ColorsController)
   .controller('TypographyController', TypographyController)
   .controller('GridController', GridController)
-  .controller('ListsController', ListsController);
+  .controller('ListsController', ListsController)
+  .controller('HomePageController', HomePageController)
+  .controller('PagesController', PagesController);
