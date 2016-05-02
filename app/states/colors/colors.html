@@ -13,7 +13,7 @@
             <div class="ju-col-lg-12of24 " ng-repeat="buttonState in Colors.buttonsState">
                 <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorClassName(color,buttonState)">
                     <div class="color"></div>
-                    <div class="text">
+                    <div class="hex">
                         {{ :: Colors.getColorNameAndState(color,buttonState)}}
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             <div class="ju-col-lg-12of24 " ng-repeat="buttonState in Colors.buttonsState">
                 <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorClassName(color,buttonState)">
                     <div class="color"></div>
-                    <div class="text">
+                    <div class="hex">
                         {{ :: Colors.getColorNameAndState(color,buttonState)}}
                     </div>
                 </div>
@@ -38,7 +38,7 @@
         <div class="ju-col-lg-6of24 " ng-repeat="color in Colors.shadesOfGrayNonState">
             <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorClassName(color,'')">
                 <div class="color"></div>
-                <div class="text">
+                <div class="hex">
                     {{ :: Colors.getColorNameAndState(color,'')}}
                 </div>
             </div>
@@ -51,7 +51,7 @@
         <div class="ju-col-lg-6of24 " ng-repeat="color in Colors.complementary">
             <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorClassName(color,'')">
                 <div class="color"></div>
-                <div class="text">
+                <div class="hex">
                     {{ :: Colors.getColorNameAndState(color,'')}}
                 </div>
             </div>

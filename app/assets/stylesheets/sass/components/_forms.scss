@@ -14,10 +14,16 @@ $company-class-prefix:'ju';
 
 input{outline: none}
 
+.#{$company-class-prefix}-Label{
+  margin-left:#{$ju-gutter}px;
+}
+
 .#{$company-class-prefix}-InputWrapper{
   position: relative;
   direction: ltr;
   margin: #{$ju-gutter/2}px 0;
+
+
 
 
   &:first-child{margin-top:0;}
@@ -35,7 +41,10 @@ input{outline: none}
     color:#{$color-red};
     font-size:#{$font-size-input-error}px;
     padding-right: 11px;
-    i{float:right;}
+    margin-top:8px;
+    i{
+      float:right;
+    }
   }
 
   input[type=checkbox] ~ .#{$error-class-name},
@@ -46,7 +55,13 @@ input{outline: none}
     position: absolute;left: -9999px;
 
     + label{
-      position: relative;  padding-left: 20px;cursor: pointer;width: auto; line-height: initial; display: inline-block; margin: 3px 0;
+      position: relative;
+      padding-left: 20px;
+      cursor: pointer;
+      width: auto;
+      line-height: initial;
+      display: inline-block;
+
       span:not(.icon-bg){
         display: inline-block;
         margin-left:#{$ju-gutter}px;
@@ -184,24 +199,79 @@ input{outline: none}
   }
 
   &WithButton{
-    &.is-icon{
-      button{padding-right:20px; padding-left:20px; background-color:#{$color-light-gray}; color:#{$color-medium-gray}}
+
+    input{
+      width:100%; border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important; direction: ltr;
     }
-    input{width:100%; border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important; direction: ltr; }
     button{
       height:100%;
       width:100%;
       color:white;
       background-color:#{$color-medium-gray};
-      line-height: 40px;
+      line-height: 38px;
       font-size: 16px;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
-      border:none;
+      border: 1px solid #{$color-medium-gray};
       padding:0 10px;
+      transition: background 200ms ease-out , color 200ms ease-out ;
+
+      &:hover{
+        background-color:white;
+        color:#{$color-medium-gray};
+      }
     }
+
     .input{overflow: hidden;}
     .button{float:right; text-align:center;line-height: #{$input-height}px; }
+
+    &.is-icon{
+      button{
+        padding-right:20px;
+        padding-left:20px;
+        background-color:#{$color-light-gray};
+        color:#{$color-medium-gray};
+        overflow: hidden;
+        position: relative;
+        border:none;
+        transition: background 200ms ease-out;
+        line-height: 40px;
+
+        &:after{
+          content: "\F061";
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          position: absolute;
+          top: 13px;
+          left: 20px;
+          transform: scale(0);
+          transition: transform 400ms ease-out 250ms;
+        }
+
+        i{
+          transition: all 500ms ease-out;
+          left:0;
+          opacity: 1;
+        }
+
+        &:hover{
+          background-color: #{$color-medium-gray};
+          color: #{$color-light-gray};
+
+          &:after{
+            transform: scale(1);
+          }
+
+          i{
+            position: relative;
+            left: 41px;
+          }
+        }
+      }
+    }
   }
 
   &--highlight{

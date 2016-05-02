@@ -3,10 +3,11 @@ body{margin:0; padding: 0; font-family: 'Roboto';}
     box-sizing: border-box;
 }
 /* common */
+p{  line-height:22px;}
 a{text-decoration:none}
 a.underline{text-decoration:underline}
 a.underline:hover{text-decoration:none}
-a span{display: block}
+a span{display: inline-block}
 .table{height:100%;display:table;width: 100%;}
 .table .cell{    display: table-cell;vertical-align: middle;line-height: normal;}
 section{overflow: hidden}
@@ -92,7 +93,7 @@ section.top-banner ul li{  display: inline;  margin: 0 10px;  }
 .film .overlay .cell i{  font-size: 35px;  }
 
 .feature-film{padding-bottom: 60px;}
-section.feature-film h4{margin: 40px 0;}
+section.feature-film h4{margin: 0px 0 60px; text-align: center;}
 section.feature-film .left{float:left;max-width: 550px;margin-left: -11px;}
 section.feature-film .right{height: 400px;}
 
@@ -268,32 +269,4 @@ section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
     section.top-banner h1,
     section.feature-film h4{margin-top:0}
     section.top-banner ul{display:none}
-}
-
-@media (max-width: 1024px){
-
-
-    /*
-
-    .film img{width:100%;}
-    .film .overlay{  background: none;  opacity: 1;  }
-    .film .overlay .cell i{bottom: 20px;position: absolute;right: 20px;}
-    .film .overlay .cell div{display: none;}
-    section.video-courses .right{width: 50%;}
-    section.feature-film .right{  float: none;  max-width: 90%;  margin: 0 auto;  height: auto;  padding: 0;  text-align: center;  width: inherit;  }
-    section.feature-film .right h2{text-align:center}
-    .feature-film .film{float: none;width: 90%;display: block;max-height: 198px;margin: 15px auto;}
-    section.feature-film .left{float: none;width: 100%;max-width: 100000px;margin: 0;}
-    section.video-courses .left{  float: none;  max-width: 90%;  width: initial;  margin: 0 auto;  text-align: center;  height: auto;  }
-    section.video-courses .left h2{text-align:center}
-    section.video-courses .right{float: none;width: 90%;margin: 0 auto;height: auto;margin-bottom: 40px;}
-    section.video-courses{height:auto}
-    section.video-courses .earn{  margin: 26px auto 0;  text-align: center;    }
-
-    section.short-films .short-film{width: 90%;margin: 10px auto;max-height: 200px;}
-    section.short-films .short-film .overlay .title{text-align:center}
-    section.short-films a.btn{  margin-bottom: 30px;  margin-top: 10px;  }
-    .testimonials .center .right,
-    .testimonials .center .left{  width: 90%;  margin: 20px auto 46px;  float: none;  border: none;  height: auto;  padding-left: 0; }
-    */
 }

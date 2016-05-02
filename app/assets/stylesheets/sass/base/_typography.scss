@@ -8,7 +8,8 @@ $font-weight-medium:500;
 $font-weight-bold:700;
 $font-weight-ultra-bold:900;
 
-body{font-family: 'Roboto'; font-size:16px; font-weight:#{$font-weight-light}; color:#{$color-dark-gray}; }
+body{font-family: 'Roboto'; font-size:16px; font-weight:#{$font-weight-normal}; color:#{$color-dark-gray}; line-height: 24px; }
+a{color:#{$color-dark-gray};}
 
 @mixin my-calculation-function(){
   $temp:'';
@@ -32,12 +33,27 @@ h3,h4{font-weight:#{$font-weight-normal};}
 h3{font-size:24px; line-height: 24px;}
 h4{font-size:20px; line-height: 20px;}
 
-.SubHeader{font-weight:#{$font-weight-medium};}
-
-h4{margin:24px 0;}
+//h4{margin:24px 0;}
 
 .Text{
-  &--Small{font-size:12px;}
-  &--Light{color:#{$color-medium-gray}}
+  font-size:16px;
+
+  &--Link,
+  &--SubHeader{
+    font-weight: #{$font-weight-medium};
+  }
+
+  &--Small{
+    font-size:13px;
+    font-weight: #{$font-weight-medium};
+  }
+
+  &--Light{
+    color:#{$color-medium-gray};
+  }
+
+  &--Caption{
+    font-size:12px;
+  }
 }
 

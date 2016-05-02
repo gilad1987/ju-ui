@@ -30,11 +30,13 @@ $company-class-prefix:'ju';
     }
     .description{
       margin: 30px auto;
+      line-height: 30px;
     }
     a{
       font-weight: #{$font-weight-medium};
       color:#{$color-primary-black};
       text-decoration: underline;
+      font-size:14px;
     }
   }
 
@@ -50,6 +52,10 @@ $company-class-prefix:'ju';
     }
     .text{
       overflow: hidden;
+    }
+    .description{
+      font-size:14px;
+      line-height: 26px;
     }
     h3{
       margin: 0 auto 12px;

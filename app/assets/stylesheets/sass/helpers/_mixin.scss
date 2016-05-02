@@ -50,7 +50,7 @@
       $className:generateBackgroundClass($name,$len>1,$i);
       .#{$className}{
         background-color: #{getItem($colors,$i)};
-        .text{
+        .hex{
           &:after{
             content:getItem($colors,$i); }
         }

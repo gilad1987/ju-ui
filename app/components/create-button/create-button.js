@@ -2,14 +2,13 @@ const fontAwesomeData = require('assets/files/font-awesome-data-readable.json');
 
 class createButtonController {
   // @ngInject
-  constructor($log, $element, $http , $scope) {
+  constructor($log, $element, $http , $scope, HtmlToString) {
 
     this.$element = $element;
     this.items = [];
-
+    this.HtmlToString = HtmlToString;
     this.Button = {};
     this.Button.text = 'Insert your text';
-
     this.radiusOptions = [{
       name:5,
       value:5
@@ -64,26 +63,9 @@ class createButtonController {
     //    });
   }
 
-  copyToClipboard(e){
-
-    var getHTML= function(who, deep){
-      if(!who || !who.tagName) return '';
-      var txt, ax, el= document.createElement("div");
-      var clone = who.cloneNode(true);
-      //clone.removeAttribute("ng-class");
-      //clone.removeAttribute("id");
-      el.appendChild(clone);
-      txt= el.innerHTML;
-      if(deep){
-        ax= txt.indexOf('>')+1;
-        txt= txt.substring(0, ax)+who.innerHTML+ txt.substring(ax);
-      }
-      el= null;
-      return txt;
-    };
-
+  copyToClipboard(){
     var textArea = document.createElement("textarea");
-    var htmlAsString = getHTML(document.getElementsByClassName('button-template')[0],false);
+    var htmlAsString = this.HtmlToString.parse(document.getElementsByClassName('button-template')[0],false);
     htmlAsString = htmlAsString.replace(/((([\<][\!][\-][\-][\s]?)|(ng-[a-z]+[\=\"]+))[a-z\[\s\:\.\!\=\d\'\-\+\,\{\}\&\;\(\]\)]+([\>]|[\"]))|(ng-[\w]+)|(button-template)/gi,'');
 
     textArea.innerText = htmlAsString;
