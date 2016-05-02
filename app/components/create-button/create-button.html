@@ -5,7 +5,7 @@
         <input type="text" ng-model="createButton.Button.text" />
         <br>
         <br>
-        <label>Choose size:</label>
+        <label>Choose color:</label>
         <select ng-model="createButton.color" ng-init="createButton.color = createButton.colors[0]" ng-options="color.name for color in createButton.colors"></select>
         <br>
         <br>
@@ -17,10 +17,10 @@
         <select ng-model="createButton.radiusOption" ng-init="createButton.radiusOption = createButton.radiusOptions[0]" ng-options="radius.name for radius in createButton.radiusOptions"></select>
         <br>
         <br>
-        <label>Choose shadow width:</label>
-        <select ng-model="createButton.shadowOption" ng-init="createButton.shadowOption = createButton.shadowOptions[0]" ng-options="shadow.name for shadow in createButton.shadowOptions"></select>
-        <br>
-        <br>
+        <!--<label>Choose shadow width:</label>-->
+        <!--<select ng-model="createButton.shadowOption" ng-init="createButton.shadowOption = createButton.shadowOptions[0]" ng-options="shadow.name for shadow in createButton.shadowOptions"></select>-->
+        <!--<br>-->
+        <!--<br>-->
         <label>Choose Is disabled:</label>
         <select ng-model="createButton.disableOption" ng-init="createButton.disableOption = createButton.disabledOptions[1]" ng-options="disabled.name for disabled in createButton.disabledOptions"></select>
         <br>

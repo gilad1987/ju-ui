@@ -22,8 +22,15 @@
   @each $name, $colors in $button_colors{
     &--#{$name}{
       background-color: #{getItem($colors,1)};
-      &:hover {  background-color:#{getItem($colors,2)};  }
-      &:active {  background-color: #{getItem($colors,3)};  }
+      &:hover {
+        background-color:#{getItem($colors,2)};
+      }
+      &:active {
+        background-color: #{getItem($colors,3)};
+      }
+      &:after{
+        background-color: #{getItem($colors,1)};
+      }
       &.is-inverse{
         background-color: white;
         color:#{getItem($colors,1)};
@@ -34,8 +41,8 @@
   }
 }
 
-@function generateBackgroundClass($colorName,$hasStates,$keyState){
-  $className: 'u-Background--'+$colorName;
+@function generateBackgroundOrTextColorClassName($classPrefix, $colorName,$hasStates,$keyState){
+  $className: $classPrefix+$colorName;
   $suffix:('','--hover','--active');
   @if($hasStates && $keyState>1){
     $className: $className + getItem($suffix,$keyState);
@@ -47,13 +54,26 @@
   @each $name, $colors in $button_colors{
     $len : length($colors);
     @for $i from 1 through $len{
-      $className:generateBackgroundClass($name,$len>1,$i);
+      $className:generateBackgroundOrTextColorClassName('u-Background--',$name,$len>1,$i);
       .#{$className}{
         background-color: #{getItem($colors,$i)};
         .hex{
           &:after{
             content:getItem($colors,$i); }
         }
+      }
+    }
+  }
+}
+
+
+@mixin createUtilityTextColors($button_colors) {
+  @each $name, $colors in $button_colors{
+    $len : length($colors);
+    @for $i from 1 through $len{
+      $className:generateBackgroundOrTextColorClassName('u-TextColor--',$name,$len>1,$i);
+      .#{$className}{
+        color: #{getItem($colors,$i)};
       }
     }
   }

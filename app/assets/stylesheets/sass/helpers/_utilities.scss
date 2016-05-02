@@ -13,8 +13,11 @@ $social-button-padding:24;
 // padding
 .u-ignorePaddingTop{padding-top:0 !important;}
 
-//colors
+// Background colors
 @include createUtilityBackgroundColors($button_colors);
+
+// text colors
+@include createUtilityTextColors($text_colors);
 
 // Social background
 .u-SocialBg-facebook{background-color: #{$color-social-facebook};}

@@ -3,6 +3,18 @@
 
 $icon-button-margin-right:5;
 
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
 
 .Button {
 
@@ -11,7 +23,10 @@ $icon-button-margin-right:5;
   text-align: center;
   border:none;
   color:#{$color-white};
-  font-weight: 500;
+  font-weight: 400;
+  transition: all 500ms ease-out 100ms;
+  position: relative;
+  overflow: hidden;
 
   &--large {min-width:202px; height:68px; line-height: 68px;  }
   &--primary {  min-width:246px; height:56px; line-height: 56px;  }
@@ -31,9 +46,42 @@ $icon-button-margin-right:5;
 
   &.is-disable{color:#{$color-button-text-disabled}; background-color: #{$color-button-background-disabled}; cursor: default;}
 
-  & i{margin-right: #{$icon-button-margin-right}px;}
+  i{margin-right: #{$icon-button-margin-right}px;}
+  i,span{
+    position:relative;
+    z-index: 3;
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    border-radius: 100%;
+    opacity: .6;
+
+    transform: scale(0);
+  }
+
+  &:not(:active):after{
+    animation: ripple 1s cubic-bezier(0, 0.32, 0.58, 1);
+  }
+
+  &:after {
+    visibility: hidden;
+  }
+
+  &:focus:after {
+    visibility: visible;
+  }
 
   &--loading{
+
     &:before{
       margin-right: #{$icon-button-margin-right}px;
       display: none;
