@@ -141,10 +141,15 @@ if (process.env.NODE_ENV === 'development') {
         allChunks: true
       })
   );
-
+  config.plugins.push(
+      new ExtractTextPlugin("app/assets/stylesheets/main.css",{
+        allChunks: true
+      })
+  );
   config.module.loaders[1].loaders.push(
       ExtractTextPlugin.extract('css!sass')
   );
+
 }
 
 if (process.env.NODE_ENV !== 'test') {
@@ -154,9 +159,6 @@ if (process.env.NODE_ENV !== 'test') {
       /* filename: */ 'vendor.[hash].js'
     )
   );
-
-
-
 }
 
 module.exports = config;

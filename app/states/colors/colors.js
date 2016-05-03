@@ -32,4 +32,8 @@ export class ColorsController {
     color = color.split('-').join(' ');
     return this.capitalizeFirstLetter(color) +" "+ this.capitalizeFirstLetter(state);
   }
+
+  copyHEXtoClipboard(){
+
+  }
 }

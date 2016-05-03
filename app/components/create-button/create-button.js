@@ -49,18 +49,6 @@ class createButtonController {
         value:item
       })
     });
-    //$http.get('assets/files/font-awesome-data-readable.json')
-    //    .then((response)=>{
-    //      Object.keys(response.data).map((item)=>{
-    //        return this.icons.push({
-    //          name:item,
-    //          value:item
-    //        })
-    //      });
-    //    })
-    //    .catch(()=>{
-    //
-    //    });
   }
 
   copyToClipboard(){

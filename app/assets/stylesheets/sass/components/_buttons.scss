@@ -47,6 +47,7 @@ $icon-button-margin-right:5;
   &.is-disable{color:#{$color-button-text-disabled}; background-color: #{$color-button-background-disabled}; cursor: default;}
 
   i{margin-right: #{$icon-button-margin-right}px;}
+
   i,span{
     position:relative;
     z-index: 3;

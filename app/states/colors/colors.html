@@ -14,7 +14,7 @@
 
         <div class="ju-col-lg-12of24">
             <h3>Background classes:</h3>
-            <div class="" ng-repeat="color in Colors.TextColors" ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')">
+            <div class="" ng-repeat="color in Colors.TextColors" ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')" >
                 .{{:: Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'') }}
             </div>
         </div>
@@ -25,9 +25,9 @@
 
         <div class="ju-col-lg-12of24 group" ng-repeat="color in Colors.buttonColors">
             <div class="ju-col-lg-12of24 " ng-repeat="buttonState in Colors.buttonsState">
-                <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,buttonState)">
+                <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,buttonState)" >
                     <div class="color"></div>
-                    <div class="hex">
+                    <div class="hex" copy-hex-to-clipboard>
                         {{ :: Colors.getColorNameAndState(color,buttonState)}}
                     </div>
                 </div>
@@ -40,9 +40,9 @@
 
         <div class="ju-col-lg-12of24 group" ng-repeat="color in Colors.grays">
             <div class="ju-col-lg-12of24 " ng-repeat="buttonState in Colors.buttonsState">
-                <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,buttonState)">
+                <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,buttonState)" >
                     <div class="color"></div>
-                    <div class="hex">
+                    <div class="hex" copy-hex-to-clipboard>
                         {{ :: Colors.getColorNameAndState(color,buttonState)}}
                     </div>
                 </div>
@@ -50,9 +50,9 @@
         </div>
 
         <div class="ju-col-lg-6of24 " ng-repeat="color in Colors.shadesOfGrayNonState">
-            <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')">
+            <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')" >
                 <div class="color"></div>
-                <div class="hex">
+                <div class="hex" copy-hex-to-clipboard>
                     {{ :: Colors.getColorNameAndState(color,'')}}
                 </div>
             </div>
@@ -63,28 +63,13 @@
         </div>
 
         <div class="ju-col-lg-6of24 " ng-repeat="color in Colors.complementary">
-            <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')">
+            <div class="ColorBox " ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')" >
                 <div class="color"></div>
-                <div class="hex">
+                <div class="hex" copy-hex-to-clipboard>
                     {{ :: Colors.getColorNameAndState(color,'')}}
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="for_developers"></div>
-
-    <div class="ju-col-lg-12of24">
-        <h3>Color classes:</h3>
-        <div ng-repeat="color in Colors.TextColors" ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-TextColor--',color,'')">
-            .{{:: Colors.getUtilityBackgroundColorOrTextColorClassName('u-TextColor--',color,'') }}
-        </div>
-    </div>
-
-    <div class="ju-col-lg-12of24">
-        <h3>Background classes:</h3>
-        <div class="" ng-repeat="color in Colors.TextColors" ng-class="Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'')">
-            .{{:: Colors.getUtilityBackgroundColorOrTextColorClassName('u-Background--',color,'') }}
-        </div>
-    </div>
+    
 </div>
