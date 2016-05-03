@@ -16,8 +16,8 @@ section{overflow: hidden}
 
 
 section.top-banner{color:white;padding-top: 216px;padding-bottom: 66px;background: url('/states/home-page/images/top-banner.jpg') top center no-repeat;background-size: cover;text-align: center;}
-section.top-banner h1{margin-bottom: 30px;font-size: 45px;}
-section.top-banner .sign-up{font-size: 13px;margin-top: 15px;}
+section.top-banner h1{margin-bottom: 30px;font-size: 40px; font-weight:200; }
+section.top-banner .sign-up{margin-top: 15px;}
 section.top-banner .sign-up a{color:white;}
 section.top-banner ul{margin-top: 130px;  margin-bottom: 16px;}
 section.top-banner ul li{  display: inline;  margin: 0 10px;  }
@@ -40,9 +40,7 @@ section.top-banner ul li{  display: inline;  margin: 0 10px;  }
     background-position: center center;
     width: 100%;
 }
-.film:first-child{
-    /* margin-top: 85px; */
-}
+
 .film:nth-child(1){/* background-image: url('../images/israel-inside.png'); */}
 .film:nth-child(2){background-image: url('../../../states/home-page/images/mekonen.png');}
 .film:nth-child(3){background-image: url('../../../states/home-page/images/bth.png');}
@@ -118,6 +116,7 @@ section.video-courses .earn a{color:black;}
 section.video-courses .Button{margin-bottom:67px;margin-top: 20px;}
 
 section.short-films{text-align:center;}
+section.short-films .sub-title{margin :35px 0; }
 section.short-films .short-film{top: 0;box-shadow: none;position: relative;overflow: hidden;}
 section.short-films .short-film .overlay{  opacity: 1;  padding: 25px;  font-size: 14px;  height: auto;  min-height: 100%;
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
@@ -155,16 +154,16 @@ section.short-films .short-film .overlay i{  font-size: 38px;  margin-top: 72px;
     -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
 }
-section.short-films .short-film:hover .overlay .title {  margin: 9px 0;  }
-section.short-films .short-film:hover .overlay i{  margin-top: 40px;  }
+
 section.short-films .short-film .overlay .title{  text-align: left;margin: 48px 0;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
 }
-section.short-films .short-film:hover .overlay .title{margin: 9px 0;}
-section.short-films .short-film .overlay .description{  text-align: left;  font-weight: 100;  }
+
+
+section.short-films .short-film .overlay .description{  text-align: left;  font-weight: 100;  line-height: 18px; font-size:13px; }
 section.short-films .Button{margin-top:30px}
 section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
 
@@ -186,7 +185,7 @@ section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
     background: rgba(12, 12, 12, 0.53);
 }
 .who-are-we-video .table{position:relative;text-align: center;color: white;font-size: 55px;}
-.who-are-we-video .play-icon-rapper{position:absolute;top:0;left:0;width: 100%;height: 100%;/* padding: 18px; */}
+.who-are-we-video .play-icon-rapper{position:absolute;top:0;left:0;width: 100%;height: 100%;  transition: background 0.2s ease}
 .who-are-link{
     color: black;
     font-weight: 600;
@@ -234,6 +233,10 @@ section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
 
     .testimonial-and-who-are-we .ju-col-3of8{border-top: 1px solid #e7e7e7;}
     .testimonial-and-who-are-we .ju-col-3of8.right{border-left: 1px solid #e7e7e7;padding-bottom: 44px;}
+
+    section.short-films .short-film:hover .overlay i{  margin-top: 40px;  }
+    section.short-films .short-film:hover .overlay .title {  margin: 9px 0; font-size:14px;  }
+    section.short-films .short-film:hover .overlay .title{margin: 9px 0;}
 }
 
 @media  (max-width: 769px){
@@ -269,4 +272,12 @@ section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
     section.top-banner h1,
     section.feature-film h4{margin-top:0}
     section.top-banner ul{display:none}
+
+    section.short-films .short-film .overlay .title{text-align: center;    margin-top: 34px; }
+}
+
+@media (min-width: #{($desktop)} + 'px') {
+    .film.first {
+        margin-top: 53px;
+    }
 }
