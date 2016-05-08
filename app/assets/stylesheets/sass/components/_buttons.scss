@@ -40,7 +40,15 @@ $icon-button-margin-right:5;
   &--compact{min-width:202px; height:34px; line-height: 34px;}
   &--mini,&--compact{font-size:14px;}
 
-  &--tag{width:auto; height:27px; line-height: 27px; font-size:14px; padding:0 22px; text-transform: none;}
+  &--tag{
+    width:auto;
+    height:27px;
+    line-height: 27px;
+    font-size:14px;
+    padding:0 12px;
+    text-transform: none;
+    background: url('../../../states/home-page/images/pixel-black.png');
+  }
 
   @include addButtonColorSuffix($button_colors);
 

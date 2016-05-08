@@ -15,9 +15,9 @@ section{overflow: hidden}
 
 
 
-section.top-banner{color:white;padding-top: 216px;padding-bottom: 66px;background: url('/states/home-page/images/top-banner.jpg') top center no-repeat;background-size: cover;text-align: center;}
-section.top-banner h1{margin-bottom: 30px;font-size: 40px; font-weight:200; }
-section.top-banner .sign-up{margin-top: 15px;}
+section.top-banner{color:white;padding-top: 216px;padding-bottom: 50px;background: url('/states/home-page/images/top-banner.jpg') top center no-repeat;background-size: cover;text-align: center;}
+section.top-banner h1{margin-bottom: 30px;font-size: 40px; letter-spacing: .5px; }
+section.top-banner .sign-up{margin-top: 15px; letter-spacing: .4px;}
 section.top-banner .sign-up a{color:white;}
 section.top-banner ul{margin-top: 130px;  margin-bottom: 16px;}
 section.top-banner ul li{  display: inline;  margin: 0 10px;  }
@@ -55,7 +55,10 @@ section.top-banner ul li{  display: inline;  margin: 0 10px;  }
 
 
 .film img{float: left;/* opacity: 0; *//* display: block; */width: 100%;}
-.film .new{  position: absolute;  top: 20px;  right: 20px;  background: url('../../../states/home-page/images/pixel-black.png');  color: white;  padding: 5px 13px;  border-radius: 4px;  font-size: 12px;
+section.feature-film .film .Button--tag{
+    margin:0;
+    position: absolute;  top: 20px;  right: 20px;
+    color: white;
     -webkit-transition: all 400ms ease-out ;
     -moz-transition:all 400ms ease-out ;
     -o-transition: all 400ms ease-out ;
@@ -69,8 +72,8 @@ section.top-banner ul li{  display: inline;  margin: 0 10px;  }
     -o-transition: all 400ms ease-out ;
     transition: all 400ms ease-out ;
 }
-.film .text .name{}
-.film .text .slogan{}
+.film .text .name{font-size:14px;}
+.film .text .slogan{font-size:12px;}
 
 .film .overlay{  position: absolute;  width: 100%;  height: 100%;  background: url('../../../states/home-page/images/pixel-black.png');  top: 0;  left: 0;  color: white;  text-align: center;  opacity: 0;
     -webkit-transition: all 200ms ease-out ;
@@ -113,7 +116,7 @@ section.video-courses h2{text-align:left;margin-top: 0;}
 section.video-courses{background:#f7f8f9}
 section.video-courses .earn{color: #999a9a;font-size: 1rem;}
 section.video-courses .earn a{color:black;}
-section.video-courses .Button{margin-bottom:67px;margin-top: 20px;}
+section.video-courses .Button{margin-bottom:40px;margin-top: 20px;}
 
 section.short-films{text-align:center;}
 section.short-films .sub-title{margin :35px 0; }
@@ -173,7 +176,7 @@ section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
 .testimonials .center{max-width: 1013px; padding-top:66px; border-top: 1px solid #e8e8e8;}
 .testimonials .center .left{  float: left;  width: 50%;  padding-right: 81px;  border-right: 1px solid #e8e8e8;  height: 390px;  }
 .testimonials .center .right{  overflow: hidden;  padding-left: 110px;  }
-.testimonials .testimonial .text{line-height: 34px;}
+.testimonials .testimonial .text{line-height: 30px;}
 .testimonials .profile{margin-top: 30px;overflow: hidden;}
 .testimonials .profile img{  float: left;  margin-right: 10px;  }
 .testimonials .profile .name{  font-weight: 600;  overflow: hidden;  padding-top: 4px;  }
@@ -227,7 +230,7 @@ section.short-films .only-mobile-tablet a.btn{margin-bottom:30px;margin-top: 0;}
     .film:hover .overlay .cell div,
     .film:hover .overlay .cell i{top:0;}
     .film:hover{top:-5px;box-shadow: 0px 3px 14px -3px #000;}
-    .film:hover .new{top: -40px;}
+    section.feature-film .film:hover .Button--tag{top: -40px;}
     .film:hover .text{bottom:-80px;}
     .film:hover .overlay{opacity:1}
 

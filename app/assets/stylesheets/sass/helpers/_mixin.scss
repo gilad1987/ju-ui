@@ -29,7 +29,7 @@
         background-color: #{getItem($colors,3)};
       }
       &:after{
-        background-color: #{getItem($colors,1)};
+        background-color: #{getItem($colors,3)};
       }
       &.is-inverse{
         background-color: white;
