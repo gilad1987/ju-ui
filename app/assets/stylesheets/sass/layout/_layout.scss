@@ -1,3 +1,4 @@
 @import "../helpers/variables";
 
 .ju-width{max-width: #{$ju_width}px; margin: 0 auto;}
+.ju-width.Small{max-width: #{$ju_width_small}px;}

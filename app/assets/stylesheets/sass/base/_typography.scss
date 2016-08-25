@@ -11,7 +11,7 @@ $font-weight-ultra-bold:900;
 body{font-family: 'Roboto'; font-size:16px; font-weight:#{$font-weight-light}; color:#{$color-dark-gray}; line-height: 24px; }
 a{color:#{$color-dark-gray};}
 
-@mixin my-calculation-function(){
+@mixin generateHeadLineTag(){
   $temp:'';
   @for $i from 1 through 4{
     @if($i==1){
@@ -23,7 +23,7 @@ a{color:#{$color-dark-gray};}
   }
   #{$temp}{margin:10px 0;};
 }
-@include my-calculation-function();
+@include generateHeadLineTag();
 
 h1,h2{font-weight:#{$font-weight-light};}
 h1{font-size:40px; line-height: 40px;}
@@ -69,6 +69,16 @@ h4{font-size:20px; line-height: 20px;}
         }
       }
 
+      &.show-underline{
+        &:after{
+          transform: scale(1);
+        }
+        &:hover{
+          &:after{
+            transform: scale(0);
+          }
+        }
+      }
     }
   }
 

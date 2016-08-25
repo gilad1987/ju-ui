@@ -2,7 +2,7 @@
 
 import angular from 'angular';
 
-import '../node_modules/font-awesome/scss/font-awesome.scss';
+// import '../node_modules/font-awesome/scss/font-awesome.scss';
 import '../node_modules/normalize.css/normalize.css';
 import 'assets/stylesheets/sass/main.scss';
 

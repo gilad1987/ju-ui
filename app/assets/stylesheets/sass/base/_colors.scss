@@ -22,6 +22,7 @@ $color-pale-blue : '#dfebed';
 $color-pale-blue-hover : '#e2edef';
 $color-pale-blue-active : '#c8d3d5';
 
+$color-black : '#000';
 $color-primary-black : '#222';
 $color-dark-gray : '#444';
 $color-medium-gray : '#888';
@@ -58,6 +59,7 @@ $button_colors: (
         light:($color-light),
         sun-flower:($color-sun-flower),
         amethyst:($color-amethyst),
+        black-color:($color-black),
 );
 
 $text_colors:(
