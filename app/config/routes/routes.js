@@ -1,3 +1,4 @@
+import { juSectionsRoutes } from './ju-sections';
 import { pagesRoutes } from './pages';
 //import { homePageRoutes } from './home-page';
 import { listsRoutes } from './lists';
@@ -18,6 +19,7 @@ const defaultRoute = /* @ngInject */ ($urlRouterProvider) => {
 };
 
 export default angular.module('JuUi.routes', ['ui.router'])
+  .config(juSectionsRoutes)
   .config(pagesRoutes)
   //.config(homePageRoutes)
   .config(listsRoutes)

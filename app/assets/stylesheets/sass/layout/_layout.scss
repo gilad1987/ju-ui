@@ -2,3 +2,39 @@
 
 .ju-width{max-width: #{$ju_width}px; margin: 0 auto;}
 .ju-width.Small{max-width: #{$ju_width_small}px;}
+
+
+/* desktop */
+@media (min-width: #{($desktop+(1))} + 'px') {
+  .Padding--Desktop{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+}
+
+/* tablet */
+@media (min-width: #{$mobile} + 'px' ) and (max-width: #{($tablet+(1))} + 'px') {
+  .Padding--Tablet {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+/* tablet */
+@media (max-width: #{$tablet} + 'px') {
+  .Padding--TabletMobile {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+}
+
+/*  mobile */
+@media (max-width: #{$mobile} + 'px') {
+  .Padding--Mobile {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+

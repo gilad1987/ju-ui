@@ -16,7 +16,7 @@
 @include makeGrid(xs);
 
 /*  mobile */
-@media (min-width: #{$mobile} + 'px') {  }
+@media (max-width: #{$mobile} + 'px') {  }
 
 /* pre mobile */
 @media (min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px') {

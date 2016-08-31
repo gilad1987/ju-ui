@@ -11,6 +11,11 @@ $font-weight-ultra-bold:900;
 body{font-family: 'Roboto'; font-size:16px; font-weight:#{$font-weight-light}; color:#{$color-dark-gray}; line-height: 24px; }
 a{color:#{$color-dark-gray};}
 
+p{
+  margin:10px 0;
+  font-weight: #{$font-weight-normal};
+}
+
 @mixin generateHeadLineTag(){
   $temp:'';
   @for $i from 1 through 4{
@@ -21,17 +26,17 @@ a{color:#{$color-dark-gray};}
     }
 
   }
-  #{$temp}{margin:10px 0;};
+  #{$temp}{margin:10px 0; line-height: initial};
 }
 @include generateHeadLineTag();
 
 h1,h2{font-weight:#{$font-weight-light};}
-h1{font-size:40px; line-height: 40px;}
-h2{font-size:30px; line-height: 30px;}
+h1{  font-size:40px;  }
+h2{font-size:30px; }
 
 h3,h4{font-weight:#{$font-weight-normal};}
-h3{font-size:24px; line-height: 24px;}
-h4{font-size:20px; line-height: 20px;}
+h3{font-size:24px; }
+h4{font-size:20px; }
 
 //h4{margin:24px 0;}
 
@@ -41,6 +46,10 @@ h4{font-size:20px; line-height: 20px;}
   &--Link,
   &--SubHeader{
     font-weight: #{$font-weight-medium};
+  }
+
+  &--Center{
+    text-align: center;
   }
 
   &--Link{

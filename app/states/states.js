@@ -1,3 +1,4 @@
+import { JuSectionsController } from './ju-sections/ju-sections';
 import { PagesController } from './pages/pages';
 import { HomePageController } from './home-page/home-page';
 import { ListsController } from './lists/lists';
@@ -18,4 +19,5 @@ export default angular.module('JuUi.controllers', [])
   .controller('GridController', GridController)
   .controller('ListsController', ListsController)
   .controller('HomePageController', HomePageController)
-  .controller('PagesController', PagesController);
+  .controller('PagesController', PagesController)
+  .controller('JuSectionsController', JuSectionsController);
