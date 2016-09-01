@@ -80,6 +80,13 @@
       $className:generateBackgroundOrTextColorClassName('u-TextColor--',$name,$len>1,$i);
       .#{$className}{
         color: #{getItem($colors,$i)};
+
+        // .Text--Link from typography.scss
+        &.Text--Link.is-underlineAnimation{
+          &:after{
+            background:#{getItem($colors,$i)};
+          }
+        }
       }
     }
   }
